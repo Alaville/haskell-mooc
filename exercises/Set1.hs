@@ -20,18 +20,19 @@ import Mooc.Todo
 ------------------------------------------------------------------------------
 -- Ex 1: define variables one and two. They should have type Int and
 -- values 1 and 2, respectively.
-one :: Int
-one = 1
+--one :: Int
+--one = 1
 
-two :: Integer
-two = 2
+--two :: Int
+--two = 2
+todo
 
 ------------------------------------------------------------------------------
 -- Ex 2: define the function double of type Integer->Integer. Double
 -- should take one argument and return it multiplied by two.
 
 double :: Integer -> Integer
-double x = 34
+double x = todo
 
 ------------------------------------------------------------------------------
 -- Ex 3: define the function quadruple that uses the function double
