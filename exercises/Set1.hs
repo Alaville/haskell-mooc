@@ -74,7 +74,7 @@ eeny = todo
 -- "mellon".
 
 checkPassword :: String -> String
-checkPassword password = if password == "swordfish"
+checkPassword password = if password == "swordfish" || "mellon"
                          then "You're in."
                          else "ACCESS DENIED!"
 
