@@ -98,7 +98,7 @@ postagePrice x = if x >= 0 && x <= 500 then 250 else if x > 500 && x <= 5000 the
 --
 -- Ps. remember, the type of booleans in haskell is Bool
 
-isZero :: Int -> Bool
+isZero :: Integer -> Bool
 isZero 0 = True
 isZero _ = False
 
