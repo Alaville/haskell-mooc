@@ -116,7 +116,7 @@ sumTo x = x + sumTo (x-1)
 -- Use recursion.
 
 power :: Integer -> Integer -> Integer
-power = todo
+power n k = n^k
 
 ------------------------------------------------------------------------------
 -- Ex 11: ilog3 n should be the number of times you can divide given
