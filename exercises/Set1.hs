@@ -135,4 +135,4 @@ power n k = n^k
 --   ilog3 7 ==> 2
 
 ilog3 :: Integer -> Integer
-ilog3 = todo
+ilog3 x = div x 3 
