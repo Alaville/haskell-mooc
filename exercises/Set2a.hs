@@ -64,7 +64,7 @@ updateAt i x (z:xs)
 --   substring 0 4 "abcdefgh"  ==>  "abcd"
 
 substring :: Int -> Int -> String -> String
-substring i j s = todo
+substring i j s = take (j - i) (drop j-(i + 1) aa)
 
 ------------------------------------------------------------------------------
 -- Ex 5: check if a string is a palindrome. A palindrome is a string
