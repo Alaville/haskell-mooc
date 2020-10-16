@@ -169,4 +169,5 @@ addEithers :: Either String Int -> Either String Int -> Either String Int
 addEithers (Right a) (Right b) = Right (a +b)
 addEithers (Right a) (Left b) = Left b
 addEithers (Left a) (Left b) = Left a
+addEithers (Left a) (Right b) = Left a
 
