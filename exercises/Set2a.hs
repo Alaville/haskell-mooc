@@ -95,7 +95,7 @@ isPalindrome str = if str == reverse str then True else False
 palindromify :: String -> String
 palindromify s
   | s == reverse s = s
-  | otherwise = init (tail s)
+  | otherwise = palindromify (init (tail s))
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement safe integer division, that is, a function that
