@@ -18,7 +18,7 @@ import Data.List
 binomial :: Integer -> Integer -> Integer
 binomial n 0 = 1
 binomial 0 k = 0
-binomial n k = (n-1,k) + (n-1, k-1)
+binomial n k = binomial (n-1,k) + (n-1, k-1)
 
 ------------------------------------------------------------------------------
 -- Ex 2: implement the odd factorial function. Odd factorial is like
