@@ -16,9 +16,9 @@ import Data.List
 -- Hint! pattern matching is your friend.
 
 binomial :: Integer -> Integer -> Integer
-binomial B(n, 0) = 1
-binomial B(0, k) = 0
-binomial B(n, k) = B(n-1,k) + B(n-1, k-1)
+binomial n 0 = 1
+binomial 0 k = 0
+binomial n k = (n-1,k) + (n-1, k-1)
 
 ------------------------------------------------------------------------------
 -- Ex 2: implement the odd factorial function. Odd factorial is like
