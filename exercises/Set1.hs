@@ -135,4 +135,7 @@ power n k = n^k
 --   ilog3 7 ==> 2
 
 ilog3 :: Integer -> Integer
-ilog3 x = if x < 3 then 1 else div x 3 
+ilog3 x
+  | x < 3 = 1
+  | x == 3 = 2
+  | otherwise = div x 3
