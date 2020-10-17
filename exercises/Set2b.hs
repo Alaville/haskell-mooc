@@ -30,7 +30,7 @@ binomial n k = binomial (n-1) (k-1) * n `div` k
 
 oddFactorial :: Integer -> Integer
 oddFactorial x
-  | x == 1 = 1
+  | x <= 2 = 1
   | even x = (x-1) * oddFactorial (x-3)
   | otherwise = x * oddFactorial (x-2)
 
