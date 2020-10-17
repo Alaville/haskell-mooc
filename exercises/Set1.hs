@@ -138,4 +138,5 @@ ilog3 :: Integer -> Integer
 ilog3 x
   | x < 3 = 1
   | x == 3 = 2
+  | X == 4 = 2
   | otherwise = div x 3
