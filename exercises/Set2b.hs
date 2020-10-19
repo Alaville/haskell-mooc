@@ -144,4 +144,6 @@ isPrime x = if smallestDivisor x < x || x == 0 || x == 1 then False else True
 --   biggestPrimeAtMost 10 ==> 7
 
 biggestPrimeAtMost :: Integer -> Integer
-biggestPrimeAtMost = todo
+biggestPrimeAtMost x
+  | isPrime x = x
+  | otherwise = biggestPrimeAtMost (x-1)
