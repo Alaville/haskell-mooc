@@ -129,7 +129,7 @@ smallestDivisor x = func 2 x
 -- Ps. 0 and 1 are not prime numbers
 
 isPrime :: Integer -> Bool
-isPrime = todo
+isPrime x = if smallestDivisor x < x || x == 0 || x == 1 then False else True 
 
 ------------------------------------------------------------------------------
 -- Ex 8: implement a function biggestPrimeAtMost that returns the
