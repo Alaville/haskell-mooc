@@ -58,6 +58,7 @@ mapMaybe f (Just x) = Just (f x)
 mapMaybe2 :: (a -> b -> c) -> Maybe a -> Maybe b -> Maybe c
 mapMaybe2 f Nothing (Just y) = Nothing
 mapMaybe2 f (Just x) Nothing = Nothing
+mapMaybe2 f Nothing Nothing = Nothing
 mapMaybe2 f (Just x) (Just y) = Just (f x y)
 
 ------------------------------------------------------------------------------
