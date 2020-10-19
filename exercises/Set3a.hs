@@ -82,7 +82,7 @@ palindromeHalfs :: [String] -> [String]
 palindromeHalfs xs = map firstHalf (filter palindrome xs)
 
 firstHalf :: String -> String
-firstHalf str = if even (length str) then take (length str `div` 2) else take ((length str `div` 2) + 1)
+firstHalf str = if even (length str) then take (length str `div` 2) str else take ((length str `div` 2) + 1) str
 
 palindrome :: String -> Bool
 palindrome str = if str == reverse str then True else False
