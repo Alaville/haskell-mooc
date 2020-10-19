@@ -113,8 +113,14 @@ countdown = todo
 --
 -- Hint: remember the mod function!
 
+func :: Integer -> Integer -> Integer
+func k n
+  | n `rem` k == 0 = k
+  | k ^ 2 > n      = n
+  | otherwise = func (k+1) n
+
 smallestDivisor :: Integer -> Integer
-smallestDivisor = todo
+smallestDivisor x = func 2 x
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a function isPrime that checks if the given number
