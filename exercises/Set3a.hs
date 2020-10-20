@@ -126,7 +126,7 @@ capitalize str = unwords (map capitalizeFirst (words str))
 myPowers n = 1 : map (* n) (myPowers n)
 
 powers :: Int -> Int -> [Int]
-powers k max = takeWhile (<= max) (myPowers n)
+powers k max = takeWhile (<= max) (myPowers k)
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a functional while loop. While should be a function
