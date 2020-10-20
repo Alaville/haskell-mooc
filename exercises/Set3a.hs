@@ -201,6 +201,13 @@ joinToLength = todo
 --   [] +|+ [True]        ==> [True]
 --   [] +|+ []            ==> []
 
+(+|+) :: [a] -> [a] -> [a]
+(+|+) [] [] = []
+(+|+) [] b = [head b]
+(+|+) a [] = [head a]
+(+|+) a b = [head a] ++ [head b]
+
+
 
 ------------------------------------------------------------------------------
 -- Ex 11: remember the lectureParticipants example from Lecture 2? We
