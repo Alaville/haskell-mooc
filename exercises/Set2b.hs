@@ -82,7 +82,7 @@ myGcd a b = if b == 0 then a else myGcd b (mod a b)
 leftpad :: String -> Int -> String
 leftpad str x
   | length str >= x = str
-  | otherwise = leftPad (" " ++ str) x
+  | otherwise = leftpad (" " ++ str) x
 
 ------------------------------------------------------------------------------
 -- Ex 5: let's make a countdown for a rocket! Given a number, you
