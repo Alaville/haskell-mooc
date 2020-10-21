@@ -38,7 +38,7 @@ allEqual :: Eq a => [a] -> Bool
 allEqual [] = True
 allEqual xs
   | maximum xs == minimum xs = True
-  | otherwise = False
+  | otherwise = False 
 
 ------------------------------------------------------------------------------
 -- Ex 2: implement the function distinct which returns True if all
