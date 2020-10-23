@@ -64,8 +64,7 @@ sums i = todo
 --   mylast 0 [1,2,3] ==> 3
 
 mylast :: a -> [a] -> a
-mylast def [] = def
-mylast def xs = xs !! (length xs - 1)
+mylast def xs = todo
 
 ------------------------------------------------------------------------------
 -- Ex 4: safe list indexing. Define a function indexDefault so that
