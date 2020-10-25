@@ -98,7 +98,7 @@ rangeOf xs = maximum xs - minimum xs
 --   longest [[1,2,3],[4,5],[6]] ==> [1,2,3]
 --   longest ["bcd","def","ab"] ==> "bcd"
 
-longest :: Num a => Ord a => [a] -> [a]
+longest :: Ord a => [[a]] -> [a]
 longest xs =  (sortBy (flip $ comparing length) xs) !! 0
 
 ------------------------------------------------------------------------------
