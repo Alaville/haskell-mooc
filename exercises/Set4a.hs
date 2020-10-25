@@ -36,7 +36,7 @@ import Data.Array
 
 allEqual :: Eq a => [a] -> Bool
 allEqual [] = True
-allEqual xs = = and $ map (== head xs) (tail xs)
+allEqual xs = and $ map (== head xs) (tail xs)
 
 ------------------------------------------------------------------------------
 -- Ex 2: implement the function distinct which returns True if all
