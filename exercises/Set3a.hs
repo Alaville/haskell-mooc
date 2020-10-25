@@ -224,7 +224,9 @@ joinToLength n xs = [x ++ y | x <- xs, y <- xs, (length x) + (length y) == n]
 --   sumRights [Left "bad!", Left "missing"]         ==>  0
 
 sumRights :: [Either a Int] -> Int
-sumRights = todo
+sumRights [] = 0
+sumRights (Right x:xs) = x + sumRights xs
+sumRights (Left _:xs) = sumRights xs
 
 ------------------------------------------------------------------------------
 -- Ex 12: recall the binary function composition operation
