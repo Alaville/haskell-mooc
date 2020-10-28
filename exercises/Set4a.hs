@@ -152,7 +152,9 @@ average xs = realToFrac (sum xs) / genericLength xs
 --     ==> "Bob"
 
 winner :: Map.Map String Int -> String -> String -> String
-winner scores player1 player2 = todo
+winner scores player1 player2
+  | Map.findWithDefault 0 player1 scores >= Map.findWithDefault 0 player2 scores = player1
+  | otherwise = player2
 
 ------------------------------------------------------------------------------
 -- Ex 9: compute how many times each value in the list occurs. Return
