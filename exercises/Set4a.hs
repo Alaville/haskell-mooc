@@ -115,8 +115,11 @@ longest xs =  (sortBy (flip $ comparing length) xs) !! 0
 --   incrementKey True [(True,1),(False,3),(True,4)] ==> [(True,2),(False,3),(True,5)]
 --   incrementKey 'a' [('a',3.4)] ==> [('a',4.4)]
 
-incrementKey :: k -> [(k,v)] -> [(k,v)]
-incrementKey = todo
+incrementKey :: Num v => Eq k => k -> [(k,v)] -> [(k,v)]
+incrementKey x [] = []
+incrementKey x ((k,v):xs)
+  | x == k = (k,(v+1)) : incrementKey x xs
+  | otherwise = (k,v) : incrementKey x xs
 
 ------------------------------------------------------------------------------
 -- Ex 7: compute the average of a list of values of the Fractional
