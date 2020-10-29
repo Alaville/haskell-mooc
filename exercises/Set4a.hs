@@ -168,19 +168,8 @@ winner scores player1 player2
 --   freqs [False,False,False,True]
 --     ==> Map.fromList [(False,3),(True,1)]
 
---freqs :: (Eq a, Ord a) => [a] -> Map.Map a Int
-
-count :: Eq a => a -> [a] -> Int
-count n [] = 0
-count n (x:xs)
-  | n == x = 1 + count n xs
-  | otherwise = count n xs
-  
-rmdups :: Eq a => [a] -> [a]
-rmdups [] = []
-rmdups (x:xs) = x : rmdups (filter(/= x) xs)
-
-freqs xs = [(count c xs, c) | c <- rmdups xs]
+freqs :: (Eq a, Ord a) => [a] -> Map.Map a Int
+freqs xs =
 
 ------------------------------------------------------------------------------
 -- Ex 10: recall the withdraw example from the course material. Write a
