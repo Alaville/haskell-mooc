@@ -168,11 +168,11 @@ winner scores player1 player2
 --   freqs [False,False,False,True]
 --     ==> Map.fromList [(False,3),(True,1)]
 
--- freqs :: (Eq a, Ord a) => [a] -> Map.Map a Int
-import Data.Map (fromListWith, toList)
+freqs :: (Eq a, Ord a) => [a] -> Map.Map a Int
 
-freqs :: (Ord a) => [a] -> [(a, Int)]
-freqs xs = toList (fromListWith (+) [(x, 1) | x <- xs])
+
+--freqs :: (Ord a) => [a] -> [(a, Int)]
+freqs xs = Map.fromList (Map.fromList (+) [(x, 1) | x <- xs])
 
 --freqs xs = todo
 
