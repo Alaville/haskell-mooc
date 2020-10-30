@@ -17,7 +17,7 @@ import Mooc.Todo
 -- Examples:
 --   countNothings []  ==>  0
 --   countNothings [Just 1, Nothing, Just 3, Nothing]  ==>  2
-
+countNothings :: [Maybe a] -> Int
 countNothings xs = foldr countHelper 0 xs
 
 countHelper = todo
