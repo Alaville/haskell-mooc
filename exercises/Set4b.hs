@@ -18,7 +18,7 @@ import Mooc.Todo
 --   countNothings []  ==>  0
 --   countNothings [Just 1, Nothing, Just 3, Nothing]  ==>  2
 
-countNothings :: [Maybe a] -> Int
+countNothings :: Eq a => [Maybe a] -> Int
 --countNothings xs = foldr countHelper 0 xs
 countNothings [] = 0
 countNothings (x:xs)
