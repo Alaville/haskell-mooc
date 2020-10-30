@@ -18,14 +18,10 @@ import Mooc.Todo
 --   countNothings []  ==>  0
 --   countNothings [Just 1, Nothing, Just 3, Nothing]  ==>  2
 
-countNothings :: Eq a => [Maybe a] -> Int
---countNothings xs = foldr countHelper 0 xs
-countNothings [] = 0
-countNothings (x:xs)
-  | x == Nothing = 1 + countNothings xs
-  | otherwise = countNothings xs
-  
---countHelper = todo
+countNothings xs = foldr countHelper 0 xs
+
+countHelper = todo
+
 ------------------------------------------------------------------------------
 -- Ex 2: myMaximum with a fold. Just like in the previous exercise,
 -- define maxHelper so that the given definition of myMaximum works.
