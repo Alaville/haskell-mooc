@@ -100,27 +100,27 @@ setAge age (MkPerson a b) = MkPerson age b
 --   getY (up (up origin))    ==> 2
 --   getX (up (right origin)) ==> 1
 
-data Position = PositionUndefined
+data Position = MkPosition Int Int
 
 -- origin is a Position value with x and y set to 0
 origin :: Position
-origin = todo
+origin = MkPosition 0 0
 
 -- getX returns the x of a Position
 getX :: Position -> Int
-getX = todo
+getX (MkPosition x y) = x 
 
 -- getY returns the y of a position
 getY :: Position -> Int
-getY = todo
+getY (MkPosition x y) = y
 
 -- up increases the y value of a position by one
 up :: Position -> Position
-up = todo
+up (MkPosition x y) = MkPosition x (y+1) 
 
 -- right increases the x value of a position by one
 right :: Position -> Position
-right = todo
+right (MkPosition x y) = MkPosition (x+1) y
 
 ------------------------------------------------------------------------------
 -- Ex 6: Here's a datatype that represents a student. A student can
