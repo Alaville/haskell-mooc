@@ -135,7 +135,12 @@ data Student = Freshman | NthYear Int | Graduated
 -- graduated student stays graduated even if he studies.
 
 study :: Student -> Student
-study = todo
+study Freshman = NthYear 1
+study Graduated = Graduated
+study NthYear x
+  | x == 7 = Graduated
+  | x < 7 && x >= 1 = NthYear (x+1)
+  |otherwise = Gratuated
 
 ------------------------------------------------------------------------------
 -- Ex 7: define a datatype UpDown that represents a counter that can
