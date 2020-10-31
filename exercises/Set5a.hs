@@ -140,7 +140,7 @@ study Graduated = Graduated
 study (NthYear x)
   | x == 7 = Graduated
   | x < 7 && x >= 1 = (NthYear (x+1))
-  |otherwise = Gratuated
+  |otherwise = Graduated
 
 ------------------------------------------------------------------------------
 -- Ex 7: define a datatype UpDown that represents a counter that can
