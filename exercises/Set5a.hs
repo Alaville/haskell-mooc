@@ -159,26 +159,28 @@ study (NthYear x)
 -- get (tick (tick (toggle (tick zero))))
 --   ==> -1
 
-data UpDown = UpDownUndefined1 | UpDownUndefined2
+data UpDown = Up Int | Down Int
 
 -- zero is an increasing counter with value 0
 zero :: UpDown
-zero = todo
+zero = Up 0 
 
 -- get returns the counter value
 get :: UpDown -> Int
-get ud = todo
+get (Up x) = x
+get (Down y) = y
 
 -- tick increases an increasing counter by one or decreases a
 -- decreasing counter by one
 tick :: UpDown -> UpDown
-tick ud = todo
+tick (Up x) = Up (x+1)
+tick (Down y) = Down (y-1)
 
 -- toggle changes an increasing counter into a decreasing counter and
 -- vice versa
 toggle :: UpDown -> UpDown
-toggle ud = todo
-
+toggle (Up x) = Down x
+toggle (Down y) = Up y
 ------------------------------------------------------------------------------
 -- Ex 8: you'll find a Color datatype below. It has the three basic
 -- colours Red, Green and Blue, and two color transformations, Mix and
