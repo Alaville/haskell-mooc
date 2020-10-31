@@ -135,11 +135,11 @@ data Student = Freshman | NthYear Int | Graduated
 -- graduated student stays graduated even if he studies.
 
 study :: Student -> Student
-study Freshman = NthYear 1
+study Freshman = (NthYear 1)
 study Graduated = Graduated
-study NthYear x
+study (NthYear x)
   | x == 7 = Graduated
-  | x < 7 && x >= 1 = NthYear (x+1)
+  | x < 7 && x >= 1 = (NthYear (x+1))
   |otherwise = Gratuated
 
 ------------------------------------------------------------------------------
