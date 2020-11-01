@@ -245,10 +245,12 @@ data KeyVals k v = Pair k v (KeyVals k v) | Empty
   deriving Show
 
 toList :: KeyVals k v -> [(k,v)]
-toList = todo
+toList Empty = []
+toList (Pair k v (Empty)) = [(k,v)]
 
 fromList :: [(k,v)] -> KeyVals k v
-fromList = todo
+fromList [] = Empty
+fromList [(k,v)] = Pair k v (Empty)
 
 ------------------------------------------------------------------------------
 -- Ex 11: The data type Nat is the so called Peano
