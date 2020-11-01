@@ -219,7 +219,7 @@ rgb col = todo
 --   One True         ::  OneOrTwo Bool
 --   Two "cat" "dog"  ::  OneOrTwo String
 
-data OneorTwo a = One a | Two a a
+data OneOrTwo a = One a | Two a a
 
 
 ------------------------------------------------------------------------------
