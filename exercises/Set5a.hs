@@ -267,7 +267,8 @@ data Nat = Zero | PlusOne Nat
   deriving (Show,Eq)
 
 fromNat :: Nat -> Int
-fromNat n = todo
+fromNat Zero = 0
+fromNat (PlusOne x) = 1 + fromNat x
 
 toNat :: Int -> Maybe Nat
 toNat z = todo
