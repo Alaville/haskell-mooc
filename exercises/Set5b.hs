@@ -63,7 +63,7 @@ allValues condition tree = todo
 
 mapTree :: (a -> b) -> Tree a -> Tree b
 mapTree _ Empty = Empty
-mapTree f (Node Tree a Tree) = Node (mapTree f Tree) (f a) (mapTree f Tree) 
+mapTree f (Node a (Tree b) (Tree c)) = Node (f a) (mapTree f (Tree b)) (mapTree f (Tree c)) 
 
 ------------------------------------------------------------------------------
 -- Ex 6: given a value and a tree, build a new tree that is the same,
