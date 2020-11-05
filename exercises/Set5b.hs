@@ -177,6 +177,7 @@ data Step = StepL | StepR
 walk :: [Step] -> Tree a -> Maybe a
 walk [] Empty = Nothing
 walk [] (Node a b c) = Just a
+walk (x:xs) Empty = Nothing
 walk (x:xs) (Node a b c)
   | x == StepL = walk xs b
   | x == StepR = walk xs c
