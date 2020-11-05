@@ -25,8 +25,12 @@ instance Eq Country where
 -- Remember minimal complete definitions!
 
 instance Ord Country where
-  compare = todo -- implement me?
-  (<=) = todo -- and me?
+  compare = todo                      -- implement me?
+  compare = todo
+  
+  Finland <= Norway      = True            -- and me?
+  Norway  <= Switzerland = True
+  
   min = todo -- and me?
   max = todo -- and me?
 
