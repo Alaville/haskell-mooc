@@ -31,6 +31,7 @@ instance Ord Country where
   
   Finland <= Finland     = True
   Finland <= Norway      = True            -- and me?
+  Finland <= Switzerland = True
   Norway  <= Switzerland = True
   
   min = todo -- and me?
