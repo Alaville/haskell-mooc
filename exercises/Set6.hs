@@ -29,7 +29,7 @@ instance Ord Country where
               | x <= y    = LT 
               | otherwise = GT -- implement me?
   
-  
+  Finland <= Finland     = True
   Finland <= Norway      = True            -- and me?
   Norway  <= Switzerland = True
   
