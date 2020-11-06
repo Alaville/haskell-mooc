@@ -30,7 +30,7 @@ instance Ord Country where
               | otherwise = GT -- implement me?
   
   
-  Finland <= Norway -- and me?
+  Finland <= Norway = True -- and me?
   
   
   min = todo -- and me?
