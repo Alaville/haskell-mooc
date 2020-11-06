@@ -29,9 +29,8 @@ instance Ord Country where
               | x <= y    = LT 
               | otherwise = GT -- implement me?
   
-  x <= x     = True
-  x <= y     = True            -- and me?
-  y < x      = False
+  
+  <= -- and me?
   
   
   min = todo -- and me?
@@ -51,7 +50,9 @@ data Name = Name String
   deriving Show
 
 instance Eq Name where
-  (==) = todo
+  --(==) = todo
+  Name == toLower Name = True
+  _    == _            = False
 
 ------------------------------------------------------------------------------
 -- Ex 4: here is a list type parameterized over the type it contains.
