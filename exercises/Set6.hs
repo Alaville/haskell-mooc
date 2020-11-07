@@ -56,10 +56,8 @@ data Name = Name String
   deriving Show
 
 instance Eq Name where
-  --(==) = todo
-  Name == Name         = True
-  Name == toLower Name = True
-  _      == _          = False
+  (==) = todo
+  
 
 ------------------------------------------------------------------------------
 -- Ex 4: here is a list type parameterized over the type it contains.
