@@ -57,8 +57,9 @@ instance Ord Country where
 data Name = Name String
   deriving Show
 
-instance Eq Name where
-  (==) = todo
+instance Eq Name x where
+  (==) x (map toLower x) = True
+  (==) _ _               = False
   
 
 ------------------------------------------------------------------------------
