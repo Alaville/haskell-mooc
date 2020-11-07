@@ -58,6 +58,7 @@ data Name = Name String
   deriving Show
 
 instance Eq Name x where
+  (==) x x               = True
   (==) x (map toLower x) = True
   (==) _ _               = False
   
