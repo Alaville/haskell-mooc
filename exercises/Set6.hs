@@ -41,8 +41,8 @@ instance Ord Country where
   
   
   
-  min = todo -- and me?
-  max = todo -- and me?
+  --min = todo -- and me?
+  --max = todo -- and me?
 
 ------------------------------------------------------------------------------
 -- Ex 3: Implement an Eq instance for the type Name which contains a String.
