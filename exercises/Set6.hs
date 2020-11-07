@@ -30,13 +30,15 @@ instance Ord Country where
     | x <= y = LT
     | otherwise = GT
   
-  Finland <= Finland = True
-  Norway <= Norway   = True
+  Finland     <= Finland     = True
+  Norway      <= Norway      = True
   Switzerland <= Switzerland = True
   
-  Finland <= Norway = True           -- and me?
-  Norway <= Switzerland = True
-  Finland <= Switzerland = True
+  Finland     <= Norway      = True           -- and me?
+  Norway      <= Switzerland = True
+  Finland     <= Switzerland = True
+  _           <= _           = False
+  
   
   
   min = todo -- and me?
