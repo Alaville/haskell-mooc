@@ -59,7 +59,7 @@ data Name = Name String
 
 instance Eq Name x where
   (==) x x               = True
-  (==) x (map toLower x) = True
+  (==) x (toLower x)     = True
   (==) _ _               = False
   
 
