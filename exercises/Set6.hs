@@ -124,15 +124,14 @@ data Number = Finite Integer | Infinite
   
 instance Ord Number where
 
-  compare (Finite x) (Finite y)
+  compare x y
     | x == y = EQ
     | x <= y = LT
     | otherwise = GT
     
-  compare (Infinite) x = GT
-  compare x (Infinite) = LT
   
   Infinite <= Infinite = True
+  Infinite <= (Finite x) = False
   (Finite x) <= (Finite y) = x == y
 
 
