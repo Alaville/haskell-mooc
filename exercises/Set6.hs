@@ -121,6 +121,16 @@ instance Price Milk where
 
 data Number = Finite Integer | Infinite
   deriving (Show,Eq)
+  
+instance Ord Number where
+
+  compare (Finite x) (Finite y)
+    | x == y = EQ
+    | x <= y = LT
+    | otherwise = GT
+    
+  compare (Infinite) x = GT
+  compare x (Infinite) = LT
 
 
 ------------------------------------------------------------------------------
