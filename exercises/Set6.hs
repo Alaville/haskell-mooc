@@ -92,6 +92,17 @@ data Egg = ChickenEgg | ChocolateEgg
   deriving Show
 data Milk = Milk Int -- amount in litres
   deriving Show
+  
+class Price a where
+  price :: a -> Int
+  
+instance Price Egg where
+  price ChickenEgg = 20
+  price ChocolateEgg = 30
+  
+instance Price Milk where
+  price (Milk x) = (x * 15)
+  
 
 
 ------------------------------------------------------------------------------
