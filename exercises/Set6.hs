@@ -133,6 +133,7 @@ instance Ord Number where
   compare x (Infinite) = LT
   
   Infinite <= Infinite = True
+  (Finite x) <= (Finite y) = x == y
 
 
 ------------------------------------------------------------------------------
