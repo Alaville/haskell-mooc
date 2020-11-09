@@ -131,6 +131,8 @@ instance Ord Number where
     
   compare (Infinite) x = GT
   compare x (Infinite) = LT
+  
+  Infinite <= Infinite = True
 
 
 ------------------------------------------------------------------------------
