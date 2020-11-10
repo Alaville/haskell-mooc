@@ -160,7 +160,7 @@ data RationalNumber = RationalNumber Integer Integer
 
 instance Eq RationalNumber where
   --p == q = todo
-  RationalNumber a b == RationalNumber c d = (a*d) && (b*c)
+  RationalNumber a b == RationalNumber c d = (a*d) == (b*c)
 
 ------------------------------------------------------------------------------
 -- Ex 9: implement the function simplify, which simplifies rational a
