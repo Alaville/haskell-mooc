@@ -123,15 +123,10 @@ data Number = Finite Integer | Infinite
   deriving (Show,Eq)
   
 instance Ord Number where
-
-  compare x y
-    | x == y = EQ
-    | x <= y = LT
-    | otherwise = GT
     
-  
   Infinite <= Infinite = True
   Infinite <= (Finite x) = False
+  (Finite x) <= Infinite = True
   (Finite x) <= (Finite y) = x == y
 
 
