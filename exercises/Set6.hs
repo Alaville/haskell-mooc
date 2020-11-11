@@ -127,7 +127,9 @@ instance Ord Number where
   Infinite <= Infinite = True
   Infinite <= (Finite x) = False
   (Finite x) <= Infinite = True
-  (Finite x) <= (Finite y) = x == y
+  (Finite x) <= (Finite y)
+    | x <= y = True
+    | otherwise = False
 
 
 ------------------------------------------------------------------------------
