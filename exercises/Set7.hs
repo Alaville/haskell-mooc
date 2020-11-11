@@ -56,10 +56,10 @@ member :: Eq a => a -> Set a -> Bool
 member x (Set xs) = elem x xs 
 
 -- add a member to a set
-add :: Eq a => a -> Set a -> Set a
+add :: Eq a => Ord a => a -> Set a -> Set a
 add x (Set xs)
   | elem x xs = Set xs
-  | otherwise = Set (x:xs)
+  | otherwise = sort (Set (x:xs))
 
 ------------------------------------------------------------------------------
 -- Ex 3: a state machine for baking a cake. The type Event represents
