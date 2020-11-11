@@ -4,7 +4,7 @@ module Set7 where
 
 import Mooc.Todo
 import Data.List
-import Data.List.NonEmpty (NonEmpty ((:|)))
+import Data.List.NonEmpty --(NonEmpty ((:|)))
 import Data.Monoid
 import Data.Semigroup
 
