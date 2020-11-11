@@ -57,7 +57,9 @@ member x (Set xs) = elem x xs
 
 -- add a member to a set
 add :: a -> Set a -> Set a
-add x (Set xs) = Set (x)
+add x (Set xs)
+  | elem x xs = Set xs
+  | otherwise = Set (x:xs)
 
 ------------------------------------------------------------------------------
 -- Ex 3: a state machine for baking a cake. The type Event represents
