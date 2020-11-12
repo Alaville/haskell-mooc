@@ -137,10 +137,17 @@ reverseNonEmpty xs = Data.List.NonEmpty.reverse xs
 ------------------------------------------------------------------------------
 -- Ex 7: implement a Monoid instance for the Set type from exercise 2.
 -- The (<>) operation should be the union of sets.
---
+
+-- data Set a = Set [a]
+
 -- What's the right definition for mempty?
 --
 -- What are the class constraints for the instances?
+
+--instance Monoid (Set [a]) where
+  
+
+
 
 
 ------------------------------------------------------------------------------
