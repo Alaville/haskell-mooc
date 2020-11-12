@@ -133,13 +133,13 @@ reverseNonEmpty = todo
 -- velocity (Distance 50 <> Distance 10) (Time 1 <> Time 2)
 --    ==> Velocity 20
 
-instance Num => Semigroup (Distance) where
+instance Semigroup (Distance) where
   Distance a <> Distance b = Distance (a + b)
   
-instance Num => Semigroup (Time) where
+instance Semigroup (Time) where
   Time a <> Time b = Time (a + b)
   
-instance Num => Semigroup (Velocity) where
+instance Semigroup (Velocity) where
   Velocity a <> Velocity b = Velocity (a + b)
 
 
