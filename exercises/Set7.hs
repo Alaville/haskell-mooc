@@ -144,9 +144,9 @@ reverseNonEmpty = todo
 --
 -- What are the class constraints for the instances?
 
-instance Monoid a => Monoid (Set a) where
-  mempty = 0
-  mappend = (<>)
+instance Monoid a => Monoid (Set [a]) where
+  mempty = []
+  mappend = (++)
   
 
 
