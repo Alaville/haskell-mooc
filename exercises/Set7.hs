@@ -133,6 +133,15 @@ reverseNonEmpty = todo
 -- velocity (Distance 50 <> Distance 10) (Time 1 <> Time 2)
 --    ==> Velocity 20
 
+instance Num a => Semigroup (Distance) where
+  Distance a <> Distance b = Distance (a + b)
+  
+instance Num a => Semigroup (Time) where
+  Time a <> Time b = Time (a + b)
+  
+instance Num a => Semigroup (Velocity) where
+  Velocity a <> Velocity b = Velocity (a + b)
+
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a Monoid instance for the Set type from exercise 2.
@@ -144,9 +153,7 @@ reverseNonEmpty = todo
 --
 -- What are the class constraints for the instances?
 
-instance Monoid a => Monoid (Set [a]) where
-  mempty = []
-  mappend = (++)
+
   
 
 
