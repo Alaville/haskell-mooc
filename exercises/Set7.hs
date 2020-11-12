@@ -144,7 +144,9 @@ reverseNonEmpty xs = Data.List.NonEmpty.reverse xs
 --
 -- What are the class constraints for the instances?
 
---instance Monoid (Set [a]) where
+instance Monoid a => Monoid (Set a) where
+  mempty = []
+  mappend = (<>)
   
 
 
