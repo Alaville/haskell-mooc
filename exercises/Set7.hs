@@ -121,7 +121,7 @@ average = todo
 -- Ex 5: reverse a NonEmpty list.
 
 reverseNonEmpty :: NonEmpty a -> NonEmpty a
-reverseNonEmpty xs = Data.List.NonEmpty.reverse xs
+reverseNonEmpty = todo
 
 ------------------------------------------------------------------------------
 -- Ex 6: implement Semigroup instances for the Distance, Time and
