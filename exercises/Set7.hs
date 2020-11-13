@@ -153,7 +153,7 @@ instance Semigroup (Velocity) where
 --
 -- What are the class constraints for the instances?
 
-instance Monoid (Set a) where
+instance Semigroup a => Monoid (Set a) where
   mempty = Set []
 
 
