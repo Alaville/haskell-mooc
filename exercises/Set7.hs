@@ -115,7 +115,7 @@ bake events = go Start events
 --   average (1.0 :| [2.0,3.0])  ==>  2.0
 
 average :: Fractional a => NonEmpty a -> a
-average = todo
+average xs = sum xs / length xs 
 
 ------------------------------------------------------------------------------
 -- Ex 5: reverse a NonEmpty list.
@@ -153,8 +153,7 @@ instance Semigroup (Velocity) where
 --
 -- What are the class constraints for the instances?
 
-instance Monoid (Set a) where
-  mempty = (Set [])
+
 
 
   
