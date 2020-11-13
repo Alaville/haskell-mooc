@@ -115,7 +115,7 @@ bake events = go Start events
 --   average (1.0 :| [2.0,3.0])  ==>  2.0
 
 average :: Fractional a => NonEmpty a -> a
-average xs = sum xs / length xs 
+average xs = (sum xs / fromIntegral (length xs)) 
 
 ------------------------------------------------------------------------------
 -- Ex 5: reverse a NonEmpty list.
