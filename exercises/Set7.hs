@@ -159,7 +159,7 @@ class Semigroup a => Monoid a where
   mappend :: a -> a -> a
   mappend = (<>)
 
-instance Monoid (Set a) where
+instance Semigroup a => Monoid (Set a) where
   mempty = Set []
 
 
