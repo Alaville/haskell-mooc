@@ -121,7 +121,7 @@ average xs = (sum xs / fromIntegral (length xs))
 -- Ex 5: reverse a NonEmpty list.
 
 reverseNonEmpty :: NonEmpty a -> NonEmpty a
-reverseNonEmpty xs = Data.List.NonEmpty.reverse xs
+reverseNonEmpty = todo
 
 ------------------------------------------------------------------------------
 -- Ex 6: implement Semigroup instances for the Distance, Time and
@@ -152,6 +152,9 @@ instance Semigroup (Velocity) where
 -- What's the right definition for mempty?
 --
 -- What are the class constraints for the instances?
+
+instance Monoid (Set a) where
+  (<>) x y = x ++ y
 
 
 
