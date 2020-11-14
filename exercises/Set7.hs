@@ -186,8 +186,8 @@ compute1 (Multiply1 i j) = i * j
 
 show1 :: Operation1 -> String
 show1 (Add1 a b) = "a+b"
-show1 (Substract a b) = "a-b"
-show1 (Multiply a b) = "a*b"
+show1 (Substract1 a b) = "a-b"
+show1 (Multiply1 a b) = "a*b"
 
 data Add2 = Add2 Int Int
   deriving Show
