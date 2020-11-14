@@ -154,7 +154,7 @@ instance Semigroup (Velocity) where
 -- What are the class constraints for the instances?
 
 instance Monoid (Set a) where
-  (<>) x y = x ++ y
+  mempty = a
 
 
 
