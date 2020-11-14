@@ -186,7 +186,7 @@ compute1 (Multiply1 i j) = i * j
 
 show1 :: Operation1 -> String
 show1 (Add1 a b) = "a+b"
-show1 (Substract1 a b) = "a-b"
+show1 (Subtract1 a b) = "a-b"
 show1 (Multiply1 a b) = "a*b"
 
 data Add2 = Add2 Int Int
@@ -206,7 +206,7 @@ instance Operation2 Add2 where
 
 instance Operation2 Subtract2 where
   compute2 (Subtract2 i j) = i-j
-  show2 (Substract2 i j) = "i-j"
+  show2 (Subtract2 i j) = "i-j"
   
 instance Operation2 Multiply2 where
   compute2 (Multiply2 i j) = i*j
