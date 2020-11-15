@@ -246,7 +246,8 @@ rectangle x0 y0 w h = Shape f
 -- shape.
 
 union :: Shape -> Shape -> Shape
-union = todo
+union (Shape a) (Shape b) = Shape c
+  where c coord = a coord && b coord
 
 cut :: Shape -> Shape -> Shape
 cut = todo
