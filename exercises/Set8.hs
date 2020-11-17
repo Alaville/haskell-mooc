@@ -132,8 +132,8 @@ renderListExample = renderList justADot (9,11) (9,11)
 
 dotAndLine :: Picture
 dotAndLine = Picture f
-  where f (Coord 50 10) = white
-        f (Coord _ 200) = pink
+  where f (Coord 3 4) = white
+        f (Coord _ 8) = pink
         f _           = black
 ------------------------------------------------------------------------------
 
