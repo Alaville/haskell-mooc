@@ -251,7 +251,7 @@ union (Shape a) (Shape b) = Shape c
 
 cut :: Shape -> Shape -> Shape
 cut (Shape a) (Shape b) = Shape c
-  where c coord = if (a coord /= b coord) then c coord else a coord 
+  where c coord = if (a coord == b coord) then a coord else c coord 
 ------------------------------------------------------------------------------
 
 -- Here's a snowman, built using union from circles and rectangles.
