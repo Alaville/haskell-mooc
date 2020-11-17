@@ -247,11 +247,11 @@ rectangle x0 y0 w h = Shape f
 
 union :: Shape -> Shape -> Shape
 union (Shape a) (Shape b) = Shape c
-  where c coord = a coord && b coord
+  where c coord = a coord || b coord
 
 cut :: Shape -> Shape -> Shape
 cut (Shape a) (Shape b) = Shape c
-  where c coord = a coord && (a coord && not (b coord))
+  where c coord = a coord && (not (a coord) && not (b coord))
 ------------------------------------------------------------------------------
 
 -- Here's a snowman, built using union from circles and rectangles.
