@@ -166,7 +166,8 @@ blendColor :: Color -> Color -> Color
 blendColor (Color a b c) (Color d e f) = Color (div (a+d) 2) (div (b+e) 2) (div (c+f) 2)
 
 combine :: (Color -> Color -> Color) -> Picture -> Picture -> Picture
-combine = todo
+combine f (Picture a) (Picture b) = Picture c
+  where c coord = f (a coord) (b coord)
 
 ------------------------------------------------------------------------------
 
