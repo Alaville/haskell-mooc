@@ -282,9 +282,9 @@ exampleSnowman = fill white snowman
 --   ["000000","000000","000000"]]
 
 paintSolid :: Color -> Shape -> Picture -> Picture
-paintSolid color (Shape a) (Base g) = Picture c
+paintSolid color (Shape a) (Picture g) = Picture c
   where c (Coord x y) | a coord = color
-                      | otherwise = (Base g)
+                      | otherwise = Picture g
 ------------------------------------------------------------------------------
 
 allWhite :: Picture
