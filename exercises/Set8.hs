@@ -329,7 +329,9 @@ stripes a b = Picture f
 --       ["ff0000","ff0000","000000","000000","000000"]]
 
 paint :: Picture -> Shape -> Picture -> Picture
-paint pat shape base = todo
+paint (Picture a) (Shape b) (Picture c) = Picture d
+  where d coord | b coord = a coord
+                | otherwise = c coord
 ------------------------------------------------------------------------------
 
 -- Here's a patterned version of the snowman example. See it by running:
