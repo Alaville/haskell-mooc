@@ -230,6 +230,10 @@ exampleCircle = fill red (circle 80 100 200)
 rectangle :: Int -> Int -> Int -> Int -> Shape
 rectangle x0 y0 w h = Shape f
   where f (Coord x y) = (x >= x0 && x <= (x0 + w)) && (y >= y0 && y <= (y0 + h))
+  
+exampleRectangle :: Picture
+exampleRectangle = fill red (rectangle 50 50 100 50)
+
 
 ------------------------------------------------------------------------------
 
