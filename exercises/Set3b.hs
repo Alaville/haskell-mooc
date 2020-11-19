@@ -112,7 +112,7 @@ sumsOf :: [Int] -> [Int]
 sumsOf [] = []
 sumsOf [k] = [k]
 sumsOf (x:y:[]) = x : (x+y) : []
-sumsOf (a:b:xs) = a : (a+b) : sumsOf (b:xs)
+sumsOf (a:b:c:xs) = a : (a+b) : sumsOf (c:xs)
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement the function merge that merges two sorted lists of
