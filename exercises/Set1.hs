@@ -136,7 +136,5 @@ power n k = n^k
 
 ilog3 :: Integer -> Integer
 ilog3 x
-  | x < 3 = 1
-  | x == 3 = 2
-  | x == 4 = 2
+  | x <= 3 = 1
   | otherwise = div x 3
