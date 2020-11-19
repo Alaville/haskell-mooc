@@ -110,7 +110,7 @@ sorted (x:y:xs) = if x <= y then sorted (y:xs) else False
 
 sumsOf :: [Int] -> [Int]
 sumsOf [] = []
-sumsOf [z] = z
+sumsOf [z] = [z]
 sumsOf (a:b:c:xs) = a : (a+b) : (a+b+c) : sumsOf xs
 
 ------------------------------------------------------------------------------
