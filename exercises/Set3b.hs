@@ -125,7 +125,7 @@ sumsOf (a:b:c:[]) = a : (a+b) : (a+b+c) : []
 --   merge [1,1,6] [1,2]   ==> [1,1,1,2,6]
 
 merge :: [Int] -> [Int] -> [Int]
-merge xs ys = todo
+merge xs ys = sorted (xs ++ ys)
 
 ------------------------------------------------------------------------------
 -- Ex 8: define the function mymaximum that takes a list and a
